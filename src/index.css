@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@plugin "daisyui"{
+  themes: light --default;
+}
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  
+  --color-bg-banner: #a4a898;
+  --color-dark-text: #4c5848;
+  --color-secondary-text: #797c73;
+  --color-main-headline: #221f1a;
+  --color-btn1-bg: #425f46;
+  --color-btn1-text: #425f46;
+  
+
+  
+}

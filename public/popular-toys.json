@@ -1,0 +1,74 @@
+[
+  {
+    "toyId": 1,
+    "toyName": "LEGO Star Wars X-Wing Fighter",
+    "sellerName": "Brick Galaxy",
+    "sellerEmail": "info@brickgalaxy.com",
+    "price": 99.99,
+    "rating": 4.9,
+    "availableQuantity": 45,
+    "description": "Build the legendary Star Wars X-Wing Fighter with movable wings and detailed design — perfect for collectors and kids alike.",
+    "pictureURL": "https://i.ibb.co.com/HT8GHbk5/lego-classic-bricks.jpg",
+    "subCategory": "Building Blocks"
+  },
+  {
+    "toyId": 2,
+    "toyName": "Hot Wheels Super Ultimate Garage",
+    "sellerName": "SpeedMax Toys",
+    "sellerEmail": "sales@speedmaxtoys.com",
+    "price": 129.99,
+    "rating": 4.8,
+    "availableQuantity": 30,
+    "description": "The biggest Hot Wheels garage ever built! Store over 100 cars and race them down multiple tracks for nonstop action.",
+    "pictureURL": "https://i.ibb.co.com/rRQM8Qrs/Hot-Wheels-Mega-Track-Set.jpg",
+    "subCategory": "Vehicles"
+  },
+  {
+    "toyId": 3,
+    "toyName": "Barbie Dream Camper",
+    "sellerName": "DollWorld",
+    "sellerEmail": "hello@dollworld.com",
+    "price": 89.99,
+    "rating": 4.7,
+    "availableQuantity": 50,
+    "description": "Adventure awaits with the Barbie Dream Camper, featuring rolling wheels, a kitchen, and a rooftop sleeping area.",
+    "pictureURL": "https://i.ibb.co.com/Xk7chkK7/Barbie-Dreamhouse-Copy.jpg",
+    "subCategory": "Dolls & Accessories"
+  },
+  {
+    "toyId": 4,
+    "toyName": "NERF Ultra One Blaster",
+    "sellerName": "Action Zone",
+    "sellerEmail": "support@actionzone.com",
+    "price": 64.99,
+    "rating": 4.6,
+    "availableQuantity": 70,
+    "description": "Experience extreme distance and accuracy with the NERF Ultra One motorized blaster that fires up to 120 feet.",
+    "pictureURL": "https://i.ibb.co.com/3md5xhvJ/NERF-Elite-Blaster.jpg",
+    "subCategory": "Action & Adventure"
+  },
+  {
+    "toyId": 5,
+    "toyName": "Fisher-Price Laugh & Learn Smart Stages Puppy",
+    "sellerName": "BabyJoy",
+    "sellerEmail": "contact@babyjoy.com",
+    "price": 29.99,
+    "rating": 4.9,
+    "availableQuantity": 100,
+    "description": "An adorable plush puppy that teaches letters, numbers, and songs with Smart Stages technology that grows with your child.",
+    "pictureURL": "https://i.ibb.co.com/ZPfcp8W/Teddy-Bear-Plush.jpg",
+    "subCategory": "Educational"
+  },
+  {
+    "toyId": 6,
+    "toyName": "Funko Pop! Marvel Spider-Man",
+    "sellerName": "Collector’s Den",
+    "sellerEmail": "shop@collectorsden.com",
+    "price": 14.99,
+    "rating": 4.8,
+    "availableQuantity": 150,
+    "description": "A collectible Spider-Man Funko Pop! vinyl figure that’s a must-have for any Marvel fan.",
+    "pictureURL": "https://i.ibb.co.com/zH55WRf5/Dinosaur-Figurine-Set.jpg",
+    "subCategory": "Action Figures"
+  }
+]
