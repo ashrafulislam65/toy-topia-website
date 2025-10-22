@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar md:px-[80px] bg-[#a4a898] shadow-sm">
+            <div className="navbar md:px-[80px] bg-[#a4a898] ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,7 +22,7 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">ToyTopia</a>
+                    <a className="btn btn-ghost font-bold text-xl">ToyTopia</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu flex gap-5 menu-horizontal px-1">
@@ -36,7 +36,7 @@ const Navbar = () => {
                             alt="Tailwind CSS Navbar component"
                             src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                     </div>
-                    <a className="btn bg-[#1a1a1a] text-[white] rounded-2xl">Sign in</a>
+                    <a className="btn bg-[#1a1a1a] text-[white] rounded-4xl">Sign in</a>
                 </div>
             </div>
         </div>

@@ -1,10 +1,13 @@
 import React from 'react';
 import Slider from '../components/Slider';
+import Banner from '../components/Banner';
 
 const Home = () => {
     return (
         <div>
-            <banner></banner>
+            <banner>
+                <Banner></Banner>
+            </banner>
             <section>
                 <Slider></Slider>
             </section>
