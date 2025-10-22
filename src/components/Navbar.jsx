@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router';
 const links = <>
-    <NavLink><a>Home</a></NavLink>
+    <NavLink to="/"><a>Home</a></NavLink>
     <NavLink><a>My Profile</a></NavLink>
     <NavLink><a>About</a></NavLink>
 </>
