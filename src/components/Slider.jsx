@@ -33,9 +33,9 @@ const Slider = () => {
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
             >
-                <SwiperSlide><img className='md:h-[500px]' src="https://i.ibb.co.com/HT8GHbk5/lego-classic-bricks.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide><img className='md:h-[500px]' src="https://i.ibb.co.com/Xk7chkK7/Barbie-Dreamhouse-Copy.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide><img className='md:h-[500px]' src="https://i.ibb.co.com/rRQM8Qrs/Hot-Wheels-Mega-Track-Set.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img className='md:h-[500px] w-full' src="https://i.ibb.co.com/HT8GHbk5/lego-classic-bricks.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img className='md:h-[500px] w-full' src="https://i.ibb.co.com/Xk7chkK7/Barbie-Dreamhouse-Copy.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img className='md:h-[500px] w-full' src="https://i.ibb.co.com/rRQM8Qrs/Hot-Wheels-Mega-Track-Set.jpg" alt="" /></SwiperSlide>
                 
             </Swiper>
         </>
