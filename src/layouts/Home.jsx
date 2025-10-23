@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Slider from '../components/Slider';
 import Banner from '../components/Banner';
+import PopularToys from '../components/PopularToys';
 
 const Home = () => {
     return (
         <div>
-            <banner>
+            <section>
                 <Banner></Banner>
-            </banner>
+            </section>
             <section>
                 <Slider></Slider>
+                
             </section>
-            <section></section>
+            <section>
+                <Suspense fallback={<span className="loading loading-bars loading-xl"></span>}>
+                    <PopularToys></PopularToys>
+
+                </Suspense>
+                
+            </section>
             
         </div>
     );

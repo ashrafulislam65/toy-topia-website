@@ -12,6 +12,14 @@ const router =createBrowserRouter(
                 {
                     path:"/",
                     element:<Home></Home>,
+                },
+                {
+                    path:"/profile",
+                    element:<h1>Profile Page</h1>,
+                },
+                {
+                    path:"/details/:id",
+                    element:<h1>Details Page</h1>,
                 }
             ]
         
