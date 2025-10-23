@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import HomeLayout from "../layouts/HomeLayout";
 import Home from "../layouts/Home";
 import ErrorPage from "../components/ErrorPage";
+import DetailsPage from "../layouts/DetailsPage";
 
 const router =createBrowserRouter(
     [
@@ -19,7 +20,8 @@ const router =createBrowserRouter(
                 },
                 {
                     path:"/details/:id",
-                    element:<h1>Details Page</h1>,
+                    element:<DetailsPage></DetailsPage>,
+                    loader:()=>fetch('/all-toys.json')
                 }
             ]
         

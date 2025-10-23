@@ -16,3 +16,6 @@
 
   
 }
+a.active {
+  @apply underline font-bold;
+}
