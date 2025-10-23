@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 const links = <>
     <NavLink className="" to="/">Home</NavLink>
     <NavLink className="" to="/profile">My Profile</NavLink>
@@ -36,7 +36,8 @@ const Navbar = () => {
                             alt="Tailwind CSS Navbar component"
                             src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                     </div>
-                    <a className="btn bg-[#1a1a1a] text-[white] rounded-4xl">Sign in</a>
+                    <Link to="/auth/login"><button className='btn bg-[#1a1a1a] text-[white] rounded-4xl'>Sign in</button></Link>
+                    
                 </div>
             </div>
         </div>
