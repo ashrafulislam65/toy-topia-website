@@ -57,7 +57,7 @@ const MyProfile = () => {
             setMessage('Profile updated successfully!');
             setIsEditing(false);
         } catch (error) {
-            console.error('Update error:', error);
+            //console.error('Update error:', error);
             setMessage('Error updating profile: ' + error.message);
         } finally {
             setUpdateLoading(false);

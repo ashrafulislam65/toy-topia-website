@@ -10,7 +10,9 @@ const HomeLayout = () => {
     return (
         <div>
             <header>
+                
                 <Navbar></Navbar>
+                
             </header>
             <main>
                 {

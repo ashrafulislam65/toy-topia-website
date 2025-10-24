@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { IoStar } from 'react-icons/io5';
 import { useLoaderData, useParams } from 'react-router';
 import useTitle from '../hooks/useTitle';
+import { toast } from 'react-toastify';
 
 
 const DetailsPage = () => {
@@ -18,6 +19,12 @@ const DetailsPage = () => {
 
 
     }, [data, id]);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Show success alert
+        toast.success('Success! Your request has been submitted. We will contact you soon!');
+    };
+
     if (!foundToy) {
         return (
             <div className="min-h-screen flex items-center justify-center">
@@ -78,14 +85,16 @@ const DetailsPage = () => {
                     </div>
                     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <div className="card-body">
-                            <fieldset className="fieldset">
-                                <label className="label">Name</label>
-                                <input type="text" className="input" placeholder="Name" />
-                                <label className="label">Email</label>
-                                <input type="email" className="input" placeholder="Email" />
+                            <form onSubmit={handleSubmit} action="">
+                                <fieldset className="fieldset">
+                                    <label className="label">Name</label>
+                                    <input type="text" className="input" placeholder="Name" />
+                                    <label className="label">Email</label>
+                                    <input type="email" className="input" placeholder="Email" />
 
-                                <button className="btn btn-neutral mt-4">Try Now</button>
-                            </fieldset>
+                                    <button className="btn btn-neutral mt-4">Try Now</button>
+                                </fieldset>
+                            </form>
                         </div>
                     </div>
                 </div>

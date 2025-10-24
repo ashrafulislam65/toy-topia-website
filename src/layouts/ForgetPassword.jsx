@@ -30,7 +30,7 @@ const ForgotPassword = () => {
 
         sendPasswordResetEmail(auth, email)
             .then(() => {
-                setMessage('✅ Password reset email sent! Check your inbox.');
+                setMessage(' Password reset email sent! Check your inbox.');
                 setLoading(false);
                 
                 // Automatically redirect to Gmail after 2 seconds
