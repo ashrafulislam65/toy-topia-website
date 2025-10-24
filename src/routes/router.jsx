@@ -6,6 +6,7 @@ import DetailsPage from "../layouts/DetailsPage";
 import Login from "../layouts/Login";
 import Register from "../layouts/Register";
 import AuthLayout from "../layouts/AuthLayout";
+import PrivateRoute from "../provider/PrivateRoute";
 
 const router =createBrowserRouter(
     [
@@ -23,7 +24,9 @@ const router =createBrowserRouter(
                 },
                 {
                     path:"/details/:id",
-                    element:<DetailsPage></DetailsPage>,
+                    element:<PrivateRoute>
+                        <DetailsPage></DetailsPage>
+                    </PrivateRoute>,
                     loader:()=>fetch('/all-toys.json')
                 }
             ]
