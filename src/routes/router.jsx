@@ -9,51 +9,65 @@ import AuthLayout from "../layouts/AuthLayout";
 import PrivateRoute from "../provider/PrivateRoute";
 import Loading from "../components/Loading";
 import MyProfile from "../layouts/MyProfile";
+import ForgetPassword from "../layouts/ForgetPassword";
+import OrderHistory from "../layouts/OrderHistory";
 
-const router =createBrowserRouter(
+const router = createBrowserRouter(
     [
         {
-            path:"/",
-            element:<HomeLayout></HomeLayout>,
-            children:[
+            path: "/",
+            element: <HomeLayout></HomeLayout>,
+            children: [
                 {
-                    path:"/",
-                    element:<Home></Home>,
+                    path: "/",
+                    element: <Home></Home>,
                 },
                 {
-                    path:"/profile",
-                    element:<MyProfile></MyProfile>,
+                    path: "/profile",
+                    element: <MyProfile></MyProfile>,
                 },
                 {
-                    path:"/details/:id",
-                    element:<PrivateRoute>
+                path: "/orders", 
+                element: (
+                    <PrivateRoute>
+                        <OrderHistory></OrderHistory>
+                    </PrivateRoute>
+                ),
+            },
+                {
+                    path: "/details/:id",
+                    element: <PrivateRoute>
                         <DetailsPage></DetailsPage>
                     </PrivateRoute>,
-                    loader:()=>fetch('/all-toys.json'),
-                    hydrateFallbackElement:<Loading></Loading>,
+                    loader: () => fetch('/all-toys.json'),
+                    hydrateFallbackElement: <Loading></Loading>,
                 }
             ]
-        
+
         },
-       
+
         {
-            path:"/auth",
-            element:<AuthLayout></AuthLayout>,
-            children:[
+            path: "/auth",
+            element: <AuthLayout></AuthLayout>,
+            children: [
                 {
-                    path:"/auth/login",
-                    element:<Login></Login>,
+                    path: "/auth/login",
+                    element: <Login></Login>,
                 },
                 {
-                    path:"/auth/register",
-                    element:<Register></Register>,
+                    path: "/auth/register",
+                    element: <Register></Register>,
                 },
-                
+                {
+                    path: "/auth/forgot-password",
+                    element: <ForgetPassword></ForgetPassword>,
+                }
+
             ]
         },
         {
-            path:"/*",
-            element:<ErrorPage></ErrorPage>,
+            path: "/*",
+            element: <ErrorPage></ErrorPage>,
         },
     ]
 

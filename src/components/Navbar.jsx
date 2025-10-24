@@ -5,7 +5,8 @@ import { AuthContext } from '../provider/AuthProvider';
 const links = <>
     <NavLink className="" to="/">Home</NavLink>
     <NavLink className="" to="/profile">My Profile</NavLink>
-    <NavLink className="">About</NavLink>
+    <NavLink className="" to="/orders">My Orders</NavLink>
+    
 </>
 
 const Navbar = () => {

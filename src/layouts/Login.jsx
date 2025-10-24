@@ -4,8 +4,9 @@ import { AuthContext } from '../provider/AuthProvider';
 import useTitle from '../hooks/useTitle';
 
 const Login = () => {
-     useTitle('Login');
-    const [error,setError] = useState('');
+    useTitle('Login');
+    const [error, setError] = useState('');
+    const [email, setEmail] = useState('');
     const { signIn } = use(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
@@ -16,18 +17,19 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log({ email, password });
-        signIn(email,password).then(result => {
+        setEmail(email);
+        signIn(email, password).then(result => {
             const user = result.user;
             console.log(user);
-            navigate(`${location.state?location.state : '/'}`)
+            navigate(`${location.state ? location.state : '/'}`)
 
         })
-        .catch((error) => {
-         const errorCode = error.code;
-        //  const errorMessage = error.message;
-         //  alert(errorCode,errorMessage);
-          setError(errorCode);
-         });
+            .catch((error) => {
+                const errorCode = error.code;
+                //  const errorMessage = error.message;
+                //  alert(errorCode,errorMessage);
+                setError(errorCode);
+            });
     };
     return (
         <div className='flex justify-center min-h-screen items-center'>
@@ -36,10 +38,12 @@ const Login = () => {
                 <form onSubmit={handleLogin} className="card-body">
                     <fieldset className="fieldset">
                         <label className="label">Email</label>
-                        <input required name='email' type="email" className="input" placeholder="Email" />
+                        <input required name='email' type="email" onChange={(e) => setEmail(e.target.value)}className="input" placeholder="Email" />
                         <label className="label">Password</label>
                         <input required name='password' type="password" className="input" placeholder="Password" />
-                        <div><a className="link link-hover">Forgot password?</a></div>
+                        <div> <Link to="/auth/forgot-password" state={{ email: email }} className="link link-hover">
+                            Forgot password?
+                        </Link></div>
                         {error && <p className='text-red-400 text-xs'>{error}</p>}
 
                         <button type='submit' className="btn btn-neutral mt-4">Login</button>
