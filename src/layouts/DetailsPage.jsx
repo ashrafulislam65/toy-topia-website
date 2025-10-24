@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { IoStar } from 'react-icons/io5';
 import { useLoaderData, useParams } from 'react-router';
+import useTitle from '../hooks/useTitle';
 
 
 const DetailsPage = () => {
     const { id } = useParams();
+    useTitle(`Toy ${id}`);
     const data = useLoaderData();
     const [foundToy, setFoundToy] = useState(null);
     useEffect(() => {

@@ -21,7 +21,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div>{user && user.email}</div>
+            
             <div className="navbar md:px-[80px] bg-[#a4a898] ">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -43,11 +43,18 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-end">
-                    <div className="w-10">
-                        <img className='rounded-full'
-                            alt="Tailwind CSS Navbar component"
-                            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    <div className="relative group">
+                        <div className="w-10 rounded-full overflow-hidden cursor-pointer ">
+                            <img className='rounded-full'
+                                alt="Tailwind CSS Navbar component"
+                                src={`${user ? user.photoURL : "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"}`} />
+
+                        </div>
+                        <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                            {user ? user.displayName : "Guest"}
+                        </div>
                     </div>
+
                     {
                         user ? <button onClick={handleLogOut} className='btn bg-[#1a1a1a] text-[white] rounded-4xl'>Sign out</button> : <Link to="/auth/login"><button className='btn bg-[#1a1a1a] text-[white] rounded-4xl'>Sign in</button></Link>
                     }

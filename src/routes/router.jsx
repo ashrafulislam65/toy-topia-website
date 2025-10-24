@@ -7,6 +7,8 @@ import Login from "../layouts/Login";
 import Register from "../layouts/Register";
 import AuthLayout from "../layouts/AuthLayout";
 import PrivateRoute from "../provider/PrivateRoute";
+import Loading from "../components/Loading";
+import MyProfile from "../layouts/MyProfile";
 
 const router =createBrowserRouter(
     [
@@ -20,18 +22,20 @@ const router =createBrowserRouter(
                 },
                 {
                     path:"/profile",
-                    element:<h1>Profile Page</h1>,
+                    element:<MyProfile></MyProfile>,
                 },
                 {
                     path:"/details/:id",
                     element:<PrivateRoute>
                         <DetailsPage></DetailsPage>
                     </PrivateRoute>,
-                    loader:()=>fetch('/all-toys.json')
+                    loader:()=>fetch('/all-toys.json'),
+                    hydrateFallbackElement:<Loading></Loading>,
                 }
             ]
         
         },
+       
         {
             path:"/auth",
             element:<AuthLayout></AuthLayout>,

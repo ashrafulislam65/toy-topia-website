@@ -2,8 +2,10 @@ import React, { Suspense } from 'react';
 import Slider from '../components/Slider';
 import Banner from '../components/Banner';
 import PopularToys from '../components/PopularToys';
+import useTitle from '../hooks/useTitle';
 
 const Home = () => {
+    useTitle('Home');
     return (
         <div>
             <section>
