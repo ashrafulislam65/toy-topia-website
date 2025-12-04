@@ -12,6 +12,7 @@ import MyProfile from "../layouts/MyProfile";
 import ForgetPassword from "../layouts/ForgetPassword";
 import OrderHistory from "../layouts/OrderHistory";
 import AboutUs from "../components/AboutUs";
+import Contact from "../components/Contact";
 
 const router = createBrowserRouter(
     [
@@ -45,7 +46,11 @@ const router = createBrowserRouter(
                 },
                 {
                     path:"/about-us",
-                    Component:AboutUs
+                    Component:AboutUs,
+                },
+                {
+                    path:"/contact",
+                    Component:Contact,
                 }
             ]
 

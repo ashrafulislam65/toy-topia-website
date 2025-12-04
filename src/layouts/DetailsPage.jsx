@@ -35,7 +35,7 @@ const DetailsPage = () => {
     }
     const { toyName, sellerName, sellerEmail, subCategory, price, rating, availableQuantity, description, pictureURL } = foundToy[0];
     return (
-        <div>
+        <div className='mt-16'>
             <div className="hero bg-base-200 min-h-screen">
                 <div className="hero-content text-center">
                     <div className="max-w-md">
