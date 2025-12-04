@@ -11,6 +11,7 @@ import Loading from "../components/Loading";
 import MyProfile from "../layouts/MyProfile";
 import ForgetPassword from "../layouts/ForgetPassword";
 import OrderHistory from "../layouts/OrderHistory";
+import AboutUs from "../components/AboutUs";
 
 const router = createBrowserRouter(
     [
@@ -41,6 +42,10 @@ const router = createBrowserRouter(
                     </PrivateRoute>,
                     loader: () => fetch('/all-toys.json'),
                     hydrateFallbackElement: <Loading></Loading>,
+                },
+                {
+                    path:"/about-us",
+                    Component:AboutUs
                 }
             ]
 

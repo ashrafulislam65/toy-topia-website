@@ -3,12 +3,7 @@ import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { toast } from 'react-toastify';
 
-const links = <>
-    <NavLink className="" to="/">Home</NavLink>
-    <NavLink className="" to="/profile">My Profile</NavLink>
-    <NavLink className="" to="/orders">My Orders</NavLink>
-    
-</>
+
 
 const Navbar = () => {
     const { user, logOut } = use(AuthContext);
@@ -24,7 +19,7 @@ const Navbar = () => {
 
     return (
         <div>
-            
+
             <div className="navbar md:px-[80px] z-50 transition-all duration-300 bg-white fixed top-0  ">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -34,21 +29,47 @@ const Navbar = () => {
                         <ul
                             tabIndex="-1"
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            {links}
+                            <NavLink className="" to="/">Home</NavLink>
+                            <NavLink className="" to="/about-us">About Us</NavLink>
+                            <NavLink className="" to="/contact">Contact</NavLink>
+                            <NavLink className="" to="/support">Support</NavLink>
+                            {
+                                user && (<>
+
+
+                                    <NavLink className="" to="/profile">My Profile</NavLink>
+                                    <NavLink className="" to="/orders">My Orders</NavLink>
+
+
+                                </>)
+                            }
                         </ul>
                     </div>
                     <Link to='/' className="  font-bold text-3xl">ToyTopia</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu flex gap-5 menu-horizontal px-1">
-                        {links}
+                        <NavLink className="" to="/">Home</NavLink>
+                        <NavLink className="" to="/about-us">About Us</NavLink>
+                        <NavLink className="" to="/contact">Contact</NavLink>
+                        <NavLink className="" to="/support">Support</NavLink>
+                        {
+                            user && (<>
+
+
+                                <NavLink className="" to="/profile">My Profile</NavLink>
+                                <NavLink className="" to="/orders">My Orders</NavLink>
+
+
+                            </>)
+                        }
                     </ul>
                 </div>
 
                 <div className="navbar-end">
                     <div className="relative group">
                         <div className="w-10 rounded-full overflow-hidden cursor-pointer ">
-                            <img className='rounded-full'
+                            <img className='rounded-full w-8 h-8'
                                 alt="Tailwind CSS Navbar component"
                                 src={`${user ? user.photoURL : "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"}`} />
 
