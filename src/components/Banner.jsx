@@ -3,7 +3,7 @@ import bannerBg from '../assets/banner.jpg';
 
 const Banner = () => {
     return (
-        <div className='bg-[#a4a898]'>
+        <div className='bg-[#a4a898] mt-16'>
             <div className="px-20  md:h-[500px]">
                 <div className=" md:flex  gap-5  ">
                     
@@ -17,7 +17,7 @@ const Banner = () => {
                     <img
                         src={bannerBg}
                         alt="Banner Image"
-                        className="w-full md:w-1/2  rounded-lg shadow-2xl"
+                        className="w-full mt-2 md:w-1/2  rounded-lg shadow-2xl"
                     />
                 </div>
             </div>

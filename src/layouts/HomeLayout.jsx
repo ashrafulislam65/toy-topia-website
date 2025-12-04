@@ -6,24 +6,29 @@ import Loading from '../components/Loading';
 
 
 const HomeLayout = () => {
-    const {state} = useNavigation();
+    const { state } = useNavigation();
     return (
-        <div>
-            <header>
-                
-                <Navbar></Navbar>
-                
-            </header>
-            <main>
-                {
-                    state=="loading"? <Loading></Loading> : <Outlet></Outlet>
-                }
-                
-            </main>
-            <footer>
-                <Footer></Footer>
-            </footer>
-        </div>
+        <>
+
+            <div>
+                <header>
+
+                    <Navbar></Navbar>
+
+                </header>
+
+                <main>
+                    {
+                        state == "loading" ? <Loading></Loading> : <Outlet></Outlet>
+                    }
+
+                </main>
+                <footer>
+                    <Footer></Footer>
+                </footer>
+            </div>
+
+        </>
     );
 };
 
