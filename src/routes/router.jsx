@@ -13,6 +13,7 @@ import ForgetPassword from "../layouts/ForgetPassword";
 import OrderHistory from "../layouts/OrderHistory";
 import AboutUs from "../components/AboutUs";
 import Contact from "../components/Contact";
+import Support from "../components/Support";
 
 const router = createBrowserRouter(
     [
@@ -51,6 +52,10 @@ const router = createBrowserRouter(
                 {
                     path:"/contact",
                     Component:Contact,
+                },
+                {
+                    path:"/support",
+                    Component:Support,
                 }
             ]
 

@@ -19,25 +19,27 @@ const Slider = () => {
 
     return (
         <>
-            <Swiper
-                spaceBetween={30}
-                centeredSlides={true}
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                }}
-                pagination={{
-                    clickable: true,
-                }}
-                navigation={true}
-                modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper"
-            >
-                <SwiperSlide><img className='md:h-[500px] w-full' src="https://i.ibb.co.com/HT8GHbk5/lego-classic-bricks.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide><img className='md:h-[500px] w-full' src="https://i.ibb.co.com/Xk7chkK7/Barbie-Dreamhouse-Copy.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide><img className='md:h-[500px] w-full' src="https://i.ibb.co.com/rRQM8Qrs/Hot-Wheels-Mega-Track-Set.jpg" alt="" /></SwiperSlide>
-                
-            </Swiper>
+            <div className='mx-20 bg-red py-20'>
+                <Swiper
+                    spaceBetween={30}
+                    centeredSlides={true}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Autoplay, Pagination, Navigation]}
+                    className="mySwiper rounded-3xl"
+                >
+                    <SwiperSlide><img className='md:h-[500px] w-full' src="https://i.ibb.co.com/HT8GHbk5/lego-classic-bricks.jpg" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='md:h-[500px] w-full' src="https://i.ibb.co.com/Xk7chkK7/Barbie-Dreamhouse-Copy.jpg" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='md:h-[500px] w-full' src="https://i.ibb.co.com/rRQM8Qrs/Hot-Wheels-Mega-Track-Set.jpg" alt="" /></SwiperSlide>
+
+                </Swiper>
+            </div>
         </>
     );
 };
